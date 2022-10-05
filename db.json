@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": "d551b3c2-54ef-43f6-b429-41b1bc88ea62",
+            "name": "Ahmed",
+            "address": "Lublino",
+            "phone": "1234555"
+        },
+        {
+            "id": "ddd4d844-b6ed-4aae-a1b5-e85e1585250c",
+            "name": "Vasya",
+            "address": "Moscow",
+            "phone": "3423423"
+        },
+        {
+            "id": "87e4a994-b8f3-4aa2-bcd9-7f05903b8e3b",
+            "name": "Max",
+            "address": "Samara",
+            "phone": "32423534"
+        },
+        {
+            "id": "596be1fb-69b4-4f21-906d-30b17c68649c",
+            "name": "Igor",
+            "address": "Perm",
+            "phone": "435435345"
+        }
+    ]
+}

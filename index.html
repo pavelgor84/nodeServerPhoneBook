@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone book</title>
+    <style>
+        h4 {
+            margin: 10px 0px;
+        }
+
+        .firstBlock {
+            display: flex;
+        }
+
+        .findForm {
+            background-color: #c0a0df4b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-right: 5px;
+        }
+
+        .addForm {
+            text-align: right;
+            background-color: #00ff5542;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .delForm {
+            display: inline-block;
+            background-color: #ce313191;
+            border-radius: 10px;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LOW LEVEL PHONEBOOK</h1>
+    <div class="firstBlock">
+        <div class="findForm">
+            <h4>Search users</h4>
+            <form action="http://localhost:3000/find" method="GET">
+                <div>
+                    <label for="name_search">Enter user name or addess</label>
+                    <input name="searchField" id="name_search" value="" />
+                </div>
+                <div>
+                    <input type="radio" id="sortName" name="sort" value="name" checked>
+                    <label for="sortName">Sort by name</label>
+                    <input type="radio" id="sortAddress" name="sort" value="address">
+                    <label for="sortAddress">Sort by address</label>
+                </div>
+                <div>
+                    <input type="radio" id="sortUp" name="direction" value="up" checked>
+                    <label for="sortUp">Up</label>
+                    <input type="radio" id="sortDown" name="direction" value="down">
+                    <label for="sortDown">Down</label>
+                </div>
+                <div>
+                    <button>Find</button>
+                </div>
+                <div>
+                    <button formaction="http://localhost:3000/show?sort=name&direction=up">Show all users</button>
+                </div>
+            </form>
+        </div>
+        <div class="addForm">
+            <h4 style="display: block;text-align: left;">Add users</h4>
+            <form action="http://localhost:3000/add" method="POST">
+                <div>
+                    <label for="add_name">User name</label>
+                    <input name="name" id="add_name" value="" />
+                </div>
+                <div>
+                    <label for="add_address">Addess</label>
+                    <input name="address" id="add_address" value="" />
+                </div>
+                <div>
+                    <label for="add_phone">Phone</label>
+                    <input name="phone" id="add_phone" value="" />
+                </div>
+                <button style="margin-right: 90px;margin-top: 5px;">Add user</button>
+        </div>
+
+        </form>
+    </div>
+    </div>
+    <br />
+    <div class="delForm">
+        <h4>Delete users</h4>
+        <form action="http://localhost:3000/del" method="POST">
+            <div>
+                <label for="del_item">Delete user by name or ID</label>
+                <input name="item" id="del_item" value="" />
+                <button>Delete</button>
+            </div>
+        </form>
+        <br />
+        <form action="http://localhost:3000/erase" method="POST">
+            <button style="background-color: #ff0000c5;">Delete all records!</button>
+        </form>
+    </div>
+    <br />
+    <hr>
